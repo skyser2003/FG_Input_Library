@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="KeyboardInput">
+      <UniqueIdentifier>{7f631220-4e19-450f-af08-d8709c3a10d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{410cb4c0-2a2c-47a0-92b1-c0ce3fa5cc34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MouseInput">
+      <UniqueIdentifier>{26c18049-97b2-4050-b818-1a2b38a1463d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{2dfa2022-6597-41de-a974-00973eaf566f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Input.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardInput.h">
+      <Filter>KeyboardInput</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseInput.h">
+      <Filter>MouseInput</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardInput.cpp">
+      <Filter>KeyboardInput</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseInput.cpp">
+      <Filter>MouseInput</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

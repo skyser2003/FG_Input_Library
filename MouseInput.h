@@ -30,20 +30,22 @@ namespace FG
 
 		virtual void OnMsg(UINT msg, WPARAM wParam, LPARAM lParam) override;
 
+		void SetScreenSize(int width, int height);
+
 		void SetLButtonState(BUTTON_STATE state);
 		void SetRButtonState(BUTTON_STATE state);
 		void SetMoveState(MOVE_STATE state);
 		void SetWheelValue(float value);
-		void SetX(float x);
-		void SetY(float y);
-		void SetXY(float x, float y);
+		void SetX(WORD x);
+		void SetY(WORD y);
+		void SetXY(WORD x, WORD y);
 
 		BUTTON_STATE GetLButtonState() const;
 		BUTTON_STATE GetRButtonState() const;
 		MOVE_STATE GetMoveState() const;
 		float GetWheelValue() const;
-		float GetX() const;
-		float GetY() const;
+		WORD GetX() const;
+		WORD GetY() const;
 	private:
 		void SetXY(LPARAM lParam);
 
@@ -52,6 +54,7 @@ namespace FG
 		MOVE_STATE moveState;
 
 		float wheel;
-		float x,y;
+		WORD x,y;
+		WORD mScreenWidth, mScreenHeight;
 	};
 }

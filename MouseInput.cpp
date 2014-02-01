@@ -9,12 +9,16 @@ void MouseInput::Initialize()
 	lButtonState = BUTTON_NONE;
 	rButtonState = BUTTON_NONE;
 	wheel = 0.0f;
+	mScreenWidth = 0;
+	mScreenHeight = 0;
 }
 void MouseInput::Destroy()
 {
 	lButtonState = BUTTON_NONE;
 	rButtonState = BUTTON_NONE;
 	wheel = 0.0f;
+	mScreenWidth = 0;
+	mScreenHeight = 0;
 }
 
 void MouseInput::Start()
@@ -81,6 +85,12 @@ void MouseInput::OnMsg(UINT msg, WPARAM wParam, LPARAM lParam)
 	}
 }
 
+void MouseInput::SetScreenSize(int width, int height)
+{
+	mScreenWidth = width;
+	mScreenHeight = height;
+}
+
 void MouseInput::SetLButtonState(BUTTON_STATE state)
 {
 	lButtonState = state;
@@ -97,15 +107,15 @@ void MouseInput::SetWheelValue(float value)
 {
 	wheel = value;
 }
-void MouseInput::SetX(float x)
+void MouseInput::SetX(WORD x)
 {
 	this->x = x;
 }
-void MouseInput::SetY(float y)
+void MouseInput::SetY(WORD y)
 {
 	this->y = y;
 }
-void MouseInput::SetXY(float x, float y)
+void MouseInput::SetXY(WORD x, WORD y)
 {
 	SetX(x);
 	SetY(y);
@@ -127,11 +137,11 @@ float MouseInput::GetWheelValue() const
 {
 	return wheel;
 }
-float MouseInput::GetX() const
+WORD MouseInput::GetX() const
 {
 	return x;
 }
-float MouseInput::GetY() const
+WORD MouseInput::GetY() const
 {
 	return y;
 }
@@ -139,7 +149,7 @@ float MouseInput::GetY() const
 void MouseInput::SetXY(LPARAM lParam)
 {
 	x = LOWORD(lParam);
-	y = HIWORD(lParam);
+	y = mScreenHeight - HIWORD(lParam);
 }
 
 } // namespace FG

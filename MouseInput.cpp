@@ -27,14 +27,32 @@ void MouseInput::Start()
 }
 void MouseInput::End()
 {
-	if(lButtonState == BUTTON_UP)
+	switch (lButtonState)
+	{
+	case BUTTON_DOWN:
+		SetLButtonState(BUTTON_DRAG);
+		break;
+	case BUTTON_UP:
 		SetLButtonState(BUTTON_NONE);
+		break;
+	}
 
-	if(rButtonState == BUTTON_UP)
+	switch (rButtonState)
+	{
+	case BUTTON_DOWN:
+		SetRButtonState(BUTTON_DRAG);
+		break;
+	case BUTTON_UP:
 		SetRButtonState(BUTTON_NONE);
+		break;
+	}
 
-	if(moveState == MOVE_MOVING)
+	switch (moveState)
+	{
+	case MOVE_MOVING:
 		SetMoveState(MOVE_NONE);
+		break;
+	}
 }
 
 void MouseInput::OnMsg(UINT msg, WPARAM wParam, LPARAM lParam)

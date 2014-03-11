@@ -18,6 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Input\Input.h" />
+    <ClInclude Include="source\KeyboardInput\KeyboardInput.h" />
+    <ClInclude Include="source\MouseInput\MouseInput.h" />
+    <ClInclude Include="source\stdafx\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Input\Input.cpp" />
+    <ClCompile Include="source\KeyboardInput\KeyboardInput.cpp" />
+    <ClCompile Include="source\MouseInput\MouseInput.cpp" />
+    <ClCompile Include="source\stdafx\stdafx.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8A3D95DE-AD9F-469A-9035-EE4335AD3CB2}</ProjectGuid>
     <RootNamespace>InputManager</RootNamespace>
@@ -71,6 +83,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>source;source/stdafx;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -115,20 +128,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="KeyboardInput.h" />
-    <ClInclude Include="MouseInput.h" />
-    <ClInclude Include="stdafx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="KeyboardInput.cpp" />
-    <ClCompile Include="MouseInput.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

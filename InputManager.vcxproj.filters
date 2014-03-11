@@ -15,30 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Input.h">
+    <ClInclude Include="source\Input\Input.h">
       <Filter>Input</Filter>
     </ClInclude>
-    <ClInclude Include="KeyboardInput.h">
+    <ClInclude Include="source\KeyboardInput\KeyboardInput.h">
       <Filter>KeyboardInput</Filter>
     </ClInclude>
-    <ClInclude Include="MouseInput.h">
+    <ClInclude Include="source\MouseInput\MouseInput.h">
       <Filter>MouseInput</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="source\stdafx\stdafx.h">
       <Filter>stdafx</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Input.cpp">
+    <ClCompile Include="source\Input\Input.cpp">
       <Filter>Input</Filter>
     </ClCompile>
-    <ClCompile Include="KeyboardInput.cpp">
+    <ClCompile Include="source\KeyboardInput\KeyboardInput.cpp">
       <Filter>KeyboardInput</Filter>
     </ClCompile>
-    <ClCompile Include="MouseInput.cpp">
+    <ClCompile Include="source\MouseInput\MouseInput.cpp">
       <Filter>MouseInput</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="source\stdafx\stdafx.cpp">
       <Filter>stdafx</Filter>
     </ClCompile>
   </ItemGroup>

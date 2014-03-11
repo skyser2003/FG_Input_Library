@@ -16,3 +16,6 @@
 Release/*
 Debug/*
 x64/*
+
+# CMake
+build
